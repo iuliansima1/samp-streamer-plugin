@@ -25,7 +25,6 @@ jobs:
       run: |
         echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
     - name: Setup Python
       uses: actions/setup-python@v2
 
@@ -39,7 +38,6 @@ jobs:
       run: |
         cd build
         cmake --build . --config Release
-
     - name: Get current time
       uses: josStorer/get-current-time@v2
       id: current-time
@@ -64,7 +62,6 @@ jobs:
       run: |
         echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
     - name: Setup Python
       uses: actions/setup-python@v2
 
@@ -78,7 +75,6 @@ jobs:
       run: |
         cd build
         cmake --build . --config Debug
-
     - name: Get current time
       uses: josStorer/get-current-time@v2
       id: current-time
@@ -103,7 +99,6 @@ jobs:
       run: |
         echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
     - name: install packages
       run: sudo apt-get install g++-multilib
 
@@ -117,7 +112,6 @@ jobs:
       run: |
         cd build
         cmake --build . --config Debug
-
     - name: Get current time
       uses: josStorer/get-current-time@v2
       id: current-time
@@ -142,7 +136,6 @@ jobs:
       run: |
         echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
     - name: install packages
       run: sudo apt-get install g++-multilib
 
@@ -156,7 +149,6 @@ jobs:
       run: |
         cd build
         cmake --build . --config Release
-
     - name: Get current time
       uses: josStorer/get-current-time@v2
       id: current-time
